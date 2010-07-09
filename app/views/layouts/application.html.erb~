@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title> Programa de qualificação de restaurantes</title>
+    <%= javascript_include_tag :all %>
+  </head>
+  <body>
+       <p style="color: green"> <%= flash[:notice] %> </p>
+     <%if logado? %>
+        <%= menu_principal %>
+     <% end %>
+       <%= yield %>
+   </body>
+ 
+ </html>
+ 

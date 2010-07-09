@@ -1,0 +1,12 @@
+<h1> Adicionando Restaurante</h1>
+
+<%= error_messages_for :restaurante %>
+
+<%= form_for :restaurante, :url => {:action => 'create'} do |f| % >
+  Nome: <%= f.text_field :nome %> <br/>
+  endereco:  <%= f.text_field :endereco %> <br/>
+  Especialidade: <%= f.text_field :especialidade %> <br/>
+  <%= subimit_tag 'Create'%>
+<% end %>
+
+  

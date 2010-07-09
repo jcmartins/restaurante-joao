@@ -1,0 +1,9 @@
+
+<h1> Pagina de Login! </h1>
+
+<% form_tag autenticacaos_path do %>
+   login: <%= text_field_tag :login %>
+   senha: <%= password_field_tag :senha %>
+   <%=submit_tag 'enter'%>
+<%end%>
+

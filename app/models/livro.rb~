@@ -1,0 +1,6 @@
+class Livro < ActiveRecord::Base
+
+validates_presence_of :nome
+validates_numericality_of :isdn :greater_than_and_equal_to => 0
+
+end

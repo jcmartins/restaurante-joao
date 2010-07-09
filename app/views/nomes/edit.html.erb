@@ -1,0 +1,16 @@
+<h1>Editing nome</h1>
+
+<% form_for(@nome) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @nome %> |
+<%= link_to 'Back', nomes_path %>

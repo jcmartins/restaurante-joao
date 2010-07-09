@@ -1,0 +1,8 @@
+class Cliente < ActiveRecord::Base
+ validates_presence_of :nome, :message => " - deve ser preenchido"
+ validates_presence_of :senha, :message => " - deve ser preenchido"
+ validates_uniqueness_of :nome, :message => " - nome já cadastrado"
+ validates_numericality_of :idade, :greater_than => 0, :less_than => 120, :message => "-Idade ver ser entre 1 e 120anos"
+# validates_numericality_of :senha, :greater_than => 5, :less_than => 10, :message => "Sua senha deve possuir mais de 5 caracteres e menos de 10"
+ has_many :qualificacoes
+end

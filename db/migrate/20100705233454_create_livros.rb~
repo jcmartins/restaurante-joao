@@ -1,0 +1,13 @@
+class CreateLivros < ActiveRecord::Migration
+  def self.up
+    create_table :livros do |t|
+      t.string :nome, :limit => 60
+      t.integer :isdn, :limit => 15
+      t.timestamps
+    end
+  end
+
+  def self.down
+   drop_table :livros
+  end
+end

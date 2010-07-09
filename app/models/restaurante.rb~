@@ -1,0 +1,13 @@
+class Restaurante < ActiveRecord::Base
+
+ has_many :comentarios, :as => :comentavel
+ has_many :qualificacoes
+ has_and_belongs_to_many :pratos
+
+ validate :primeira_letra_Maiuscula
+ private
+ def primeira_letra_Maiuscula
+   errors.add("nome", "primeira letra Maiuscula") unless nome=~/[A-Z].*/
+ end
+
+end

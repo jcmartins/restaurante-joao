@@ -1,0 +1,18 @@
+<html>
+<h1>Exibindo livro</h1>
+<p>
+  <b>Nome:</b>
+  <%=h @livros.nome %>
+</p>
+
+<p>
+  <b>isdn:</b>
+  <%=h @livros.isdn %>
+</p>
+
+  
+<%= link_to 'Edit', { :action => 'edit', :id => @livros } %>
+<%= link_to 'Back', { :action => 'index' } %>
+
+</html>
+

@@ -1,0 +1,11 @@
+
+
+page.visual_effect :shake, 'novo_comentario'
+
+page.visual_effect :puff, 'novo_comentario'
+
+page.insert_thml :bottom, 'comentarios',:partial => 'comentarios', :locals => {:comentario => @comentario }
+
+page.insert_thml :after, 'comentarios', :partial => 'novo_comentario', :locals => {:comentavel => @comentario.comentavel }
+
+page.insert_thml :highlight,"comentario_#{@comentario.id}"
